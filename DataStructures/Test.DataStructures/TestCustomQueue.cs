@@ -11,8 +11,8 @@
             queue.Enqueue(2);
             queue.Enqueue(3);
 
-            //Assert.Equal(3, queue.Count);
-            //Assert.Equal([1, 2, 3], queue.ToArray());
+            Assert.Equal(3, queue.Count);
+            Assert.Equal([1, 2, 3], queue.ToArray());
         }
 
         [Fact]
@@ -24,8 +24,8 @@
 
             char result = queue.Dequeue();
 
-            //Assert.Equal(1, queue.Count);
-            //Assert.Equal('A', result);
+            Assert.Equal(1, queue.Count);
+            Assert.Equal('A', result);
         }
 
         [Fact]
@@ -33,7 +33,7 @@
         {
             var queue = new CustomQueue<char>();
 
-            //Assert.Throws<InvalidOperationException>(() => queue.Dequeue());
+            Assert.Throws<InvalidOperationException>(() => queue.Dequeue());
         }
 
         [Fact]
@@ -45,8 +45,8 @@
 
             char result = queue.Peek();
 
-            //Assert.Equal(2, queue.Count);
-            //Assert.Equal('A', result);
+            Assert.Equal(2, queue.Count);
+            Assert.Equal('A', result);
         }
 
         [Fact]
@@ -54,7 +54,7 @@
         {
             var queue = new CustomQueue<char>();
 
-            //Assert.Throws<InvalidOperationException>(() => queue.Peek());
+            Assert.Throws<InvalidOperationException>(() => queue.Peek());
         }
 
         [Fact]
@@ -73,7 +73,7 @@
             queue.Enqueue("Darwin");
             queue.Enqueue("Jose");
 
-            //Assert.Equal(["Cristian", "Darwin", "Jose"], queue.ToArray());
+            Assert.Equal(["Cristian", "Darwin", "Jose"], queue.ToArray());
         }
     }
 }
